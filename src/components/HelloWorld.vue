@@ -43,7 +43,7 @@ export default {
     }
   },
   mounted() {
-    console.log(window.innerWidth)
+    // console.log(window.innerWidth)
     if (window.innerWidth <= 600) {
       this.l = 6;
     }
@@ -86,7 +86,7 @@ export default {
     },
     start() {
       this.cells = [[]]
-      console.log(this.ran(this.l))
+      // console.log(this.ran(this.l))
       this.cells[0] = this.ran(this.l).map(function () {
         return Math.floor(Math.random()*2)
       })

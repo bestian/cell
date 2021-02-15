@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      rList: [false,true,true,true,true,false,false,false],
+      rList: [false,true,true,false,true,true,false,false],
       l: 10,
       cells: [[]]
     }

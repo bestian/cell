@@ -14,7 +14,7 @@
       </tr>
     </table>
     <h3>Rule {{rule}}</h3>
-    <div v-for="(c, idx) in cells" :key = "idx">
+    <div v-for="(c, idx) in cells.slice(cells.length - 10, cells.length)" :key = "idx">
       <div class = "cell" :class = "{black: item == 1}" v-for="(item,i) in c" :key="i">{{item || 0}}</div>
     </div>
   </div>

@@ -136,10 +136,12 @@ td {
   background-color: white;
   height: 1em;
   border: 1px solid black;
+  font-size: 22px;
 }
 
 table {
   border-collapse: collapse;
+  font-size: 22px;
 }
 
 </style>

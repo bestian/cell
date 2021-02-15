@@ -3,12 +3,14 @@
     <h1>細胞自動機</h1>
     <table class = "in" v-for="(r,i) in ran(8)" :key="r" >
       <tr>
-        <td>{{comp(7-i)[2] || 0}}</td>
-        <td>{{comp(7-i)[1] || 0}}</td>
-        <td>{{comp(7-i)[0] || 0}}</td>
+        <td :class = "{black: comp(7-i)[2] == 1}"></td>
+        <td :class = "{black: comp(7-i)[1] == 1}"></td>
+        <td :class = "{black: comp(7-i)[0] == 1}"></td>
       </tr>
       <tr>
-        <td><input type="checkbox" name="" v-model="rList[rList.length - i - 1]" @change="reset"/></td>
+        <td></td>
+        <td :class = "{black: rList[rList.length - i - 1] == 1}"><input type="checkbox" name="" v-model="rList[rList.length - i - 1]" @change="reset"/></td>
+        <td></td>
       </tr>
     </table>
     <h3>Rule {{rule}}</h3>
@@ -126,5 +128,18 @@ export default {
 }
 
 .cell.black {background-color: black; color: black}
+
+.black {background-color: black; color: black}
+
+td {
+  width: 1em;
+  background-color: white;
+  height: 1em;
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
 
 </style>

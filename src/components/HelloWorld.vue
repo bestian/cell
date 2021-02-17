@@ -144,4 +144,10 @@ table {
   font-size: 22px;
 }
 
+@media screen and (max-width: 600px) {
+  .in {
+    width: 25%;
+  }
+}
+
 </style>
